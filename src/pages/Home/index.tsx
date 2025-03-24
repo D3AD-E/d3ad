@@ -1,17 +1,19 @@
-import { motion } from "framer-motion";
+import { ContactForm } from "./partials/ContactForm";
+import { ExperienceTimeline } from "./partials/ExperienceTimeline";
+import { HeroSection } from "./partials/HeroSection";
+import { ProjectsSection } from "./partials/ProjectsSection";
+import { SkillsSection } from "./partials/SkillsSection";
+import { LanguageSection } from "./partials/LanguageSection";
 
-const Home: React.FC = () => {
+export const Home = () => {
   return (
-    <motion.div
-      className="flex flex-col justify-center items-center text-center"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-    >
-      <h1 className="text-4xl font-bold">Hi, I'm a Fullstack Developer</h1>
-      <p className="text-lg mt-2">Specializing in React, C#, Web3 & AI</p>
-    </motion.div>
+    <main className="container mx-auto px-4">
+      <HeroSection />
+      <SkillsSection />
+      <ExperienceTimeline />
+      <ProjectsSection />
+      <LanguageSection />
+      <ContactForm />
+    </main>
   );
 };
-
-export default Home;

@@ -1,0 +1,52 @@
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+
+export const HeroSection = () => (
+  <section className="items-center pt-40">
+    <div className="container mx-auto px-4">
+      <motion.div
+        initial={{ y: 50, opacity: 1 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="max-w-2xl"
+      >
+        <h1 className="text-5xl font-bold mb-6">
+          <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            Senior Developer
+          </span>
+        </h1>
+
+        <TypeAnimation
+          sequence={[
+            "Building decentralized futures",
+            2000,
+            "Smart Contract Architect",
+            2000,
+            "Full-Stack Blockchain Dev",
+            2000,
+          ]}
+          wrapper="div"
+          className="text-2xl text-gray-400 mb-8"
+          repeat={Infinity}
+        />
+
+        <div className="flex gap-4">
+          <a
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-full hover:scale-105 transition-transform"
+            href="https://github.com/D3AD-E"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub
+          </a>
+          <a
+            className="border border-cyan-400/30 text-cyan-400 px-8 py-3 rounded-full hover:bg-cyan-400/10 transition-colors"
+            href="/files/Resume_Yevhenii_Hordiienko.pdf"
+            download="Yevhenii_Hordiienko_CV.pdf"
+          >
+            Explore CV
+          </a>
+        </div>
+      </motion.div>
+    </div>
+  </section>
+);

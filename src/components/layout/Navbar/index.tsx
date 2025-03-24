@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import { Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getCurrentTheme } from "../../../services/localStorage/themeStorage/themeStorage";
 import { Theme } from "services/localStorage/themeStorage/themeStorage.types";
+import { motion } from "framer-motion";
 
 const Navbar: React.FC = () => {
   const [theme, setTheme] = useState<Theme>(getCurrentTheme() || Theme.Light);
@@ -17,20 +17,26 @@ const Navbar: React.FC = () => {
   }, [theme]);
 
   return (
-    <nav className="p-4 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md">
-      <h1 className="text-xl font-bold">D3AD</h1>
-      <div className="space-x-4 items-center flex">
-        <Link to="/" className="hover:underline">
-          Home
-        </Link>
-        <button
-          onClick={() =>
-            setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light)
-          }
-          className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700"
+    <nav className="fixed w-full backdrop-blur-lg bg-black/50">
+      <div className="container mx-auto flex justify-between items-center p-4">
+        <motion.span
+          className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         >
-          {theme === Theme.Light ? <Moon /> : <Sun />}
-        </button>
+          0xCV
+        </motion.span>
+
+        {/* <div className="space-x-4 items-center flex">
+          <button
+            onClick={() =>
+              setTheme(theme === Theme.Light ? Theme.Dark : Theme.Light)
+            }
+            className="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700"
+          >
+            {theme === Theme.Light ? <Moon /> : <Sun />}
+          </button>
+        </div> */}
       </div>
     </nav>
   );
