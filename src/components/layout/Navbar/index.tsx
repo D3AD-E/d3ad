@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   }, [theme]);
 
   return (
-    <nav className="fixed w-full backdrop-blur-lg bg-black/50">
+    <nav className="fixed w-full backdrop-blur-lg bg-black/50 z-10">
       <div className="container mx-auto flex justify-between items-center p-4">
         <motion.span
           className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
