@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiSend, FiUser, FiMail, FiMessageSquare } from "react-icons/fi";
-import { SiGithub, SiLinkedin, SiTelegram } from "react-icons/si";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 export const ContactForm = () => {
   return (

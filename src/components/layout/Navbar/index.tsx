@@ -1,4 +1,3 @@
-import { Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 import { getCurrentTheme } from "../../../services/localStorage/themeStorage/themeStorage";
 import { Theme } from "services/localStorage/themeStorage/themeStorage.types";

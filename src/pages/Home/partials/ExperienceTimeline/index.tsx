@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiBriefcase, FiAward, FiUsers } from "react-icons/fi";
+import { FiBriefcase } from "react-icons/fi";
 import { experiences } from "./ExperienceTimeline.consts";
 
 export const ExperienceTimeline = () => (

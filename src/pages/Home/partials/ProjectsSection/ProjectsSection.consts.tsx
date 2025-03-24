@@ -1,4 +1,4 @@
-import { SiNextdotjs, SiReact, SiSolidity } from "react-icons/si";
+import { SiNextdotjs, SiReact } from "react-icons/si";
 import { FaReact, FaDatabase } from "react-icons/fa";
 
 export const projects = [
