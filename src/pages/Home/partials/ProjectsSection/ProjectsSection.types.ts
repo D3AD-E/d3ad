@@ -1,3 +1,5 @@
+import { GitHubRepoData } from "services/api/gitHubStats/gitHubStats.types";
+
 export type Project = {
   title: string;
   description: string;
@@ -5,4 +7,5 @@ export type Project = {
   achievements: string[];
   technologyUsed?: string[];
   githubUrl?: string;
+  githubStats?: GitHubRepoData;
 };

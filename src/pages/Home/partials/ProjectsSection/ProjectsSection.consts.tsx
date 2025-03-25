@@ -1,7 +1,6 @@
 import {
   SiDotnet,
   SiExpo,
-  SiNextdotjs,
   SiNodedotjs,
   SiReact,
   SiSolana,
