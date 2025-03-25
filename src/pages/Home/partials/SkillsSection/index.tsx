@@ -37,7 +37,7 @@ export const SkillsSection = () => {
               >
                 <button
                   onClick={() => toggleCategory(category.id)}
-                  className="w-full flex items-center justify-between mb-6 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors"
+                  className="w-full flex items-center justify-between mb-6 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
                 >
                   <h3 className="text-xl font-semibold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                     {category.name}

@@ -65,7 +65,7 @@ export const ContactForm = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-400/20 transition-all"
+                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-400/20 transition-all cursor-pointer"
                 >
                   <FiSend className="w-5 h-5" />
                   Send
