@@ -26,10 +26,10 @@ const Navbar: React.FC = () => {
     <nav className="fixed w-full backdrop-blur-lg bg-black/50 z-50 border-b border-cyan-400/20">
       <div className="container mx-auto flex justify-between items-center p-4">
         <motion.a
-          href="#hero"
-          className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent"
+          className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent cursor-pointer"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          onClick={() => handleScroll("hero")}
         >
           0xCV
         </motion.a>

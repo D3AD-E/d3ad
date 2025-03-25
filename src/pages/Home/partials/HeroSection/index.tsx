@@ -12,17 +12,21 @@ export const HeroSection = () => (
       >
         <h1 className="text-5xl font-bold mb-6">
           <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            Senior Developer
+            Yevhenii Hordiienko
           </span>
         </h1>
-
+        <span className="block text-lg text-purple-400 mt-2">
+          Senior Developer
+        </span>
         <TypeAnimation
           sequence={[
+            "Full-Cycle Web Application Development",
+            2000,
+            "Open Source Contributor",
+            2000,
+            "Full-Stack Dev",
+            2000,
             "Building decentralized futures",
-            2000,
-            "Smart Contract Architect",
-            2000,
-            "Full-Stack Blockchain Dev",
             2000,
           ]}
           wrapper="div"
