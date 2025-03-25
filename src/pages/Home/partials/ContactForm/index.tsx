@@ -3,6 +3,7 @@ import { FiSend, FiMessageSquare } from "react-icons/fi";
 import { SiGithub, SiLinkedin } from "react-icons/si";
 import { useState } from "react";
 import { TiThLarge } from "react-icons/ti";
+import { MY_GITHUB_URL, MY_LINKEDIN_URL } from "consts/common.consts";
 export const ContactForm = () => {
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
@@ -16,7 +17,7 @@ export const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 relative">
+    <section className="py-20 relative " id="contact">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -76,7 +77,7 @@ export const ContactForm = () => {
           <div className="mt-12 flex justify-center gap-6">
             <motion.a
               whileHover={{ y: -3 }}
-              href="https://github.com/D3AD-E"
+              href={MY_GITHUB_URL}
               target="_blank"
               className="p-3 bg-white/5 rounded-lg hover:bg-cyan-400/10 transition-colors"
             >
@@ -85,7 +86,7 @@ export const ContactForm = () => {
 
             <motion.a
               whileHover={{ y: -3 }}
-              href="https://www.linkedin.com/in/yevhenii-hordiienko/"
+              href={MY_LINKEDIN_URL}
               target="_blank"
               className="p-3 bg-white/5 rounded-lg hover:bg-purple-400/10 transition-colors"
             >

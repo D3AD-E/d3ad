@@ -17,7 +17,7 @@ export const SkillsSection = () => {
     );
   };
   return (
-    <section className="py-20">
+    <section className="py-20" id="skills">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
           Core Stack

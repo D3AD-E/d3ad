@@ -1,8 +1,9 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { MY_CV, MY_GITHUB_URL } from "consts/common.consts";
 
 export const HeroSection = () => (
-  <section className="items-center pt-40">
+  <section className="items-center pt-40" id="hero">
     <div className="container mx-auto px-4">
       <motion.div
         initial={{ y: 50, opacity: 1 }}
@@ -32,7 +33,7 @@ export const HeroSection = () => (
         <div className="flex gap-4">
           <a
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-full hover:scale-105 transition-transform"
-            href="https://github.com/D3AD-E"
+            href={MY_GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -40,7 +41,7 @@ export const HeroSection = () => (
           </a>
           <a
             className="border border-cyan-400/30 text-cyan-400 px-8 py-3 rounded-full hover:bg-cyan-400/10 transition-colors"
-            href="/files/Resume_Yevhenii_Hordiienko.pdf"
+            href={MY_CV}
             download="Yevhenii_Hordiienko_CV.pdf"
           >
             Explore CV
