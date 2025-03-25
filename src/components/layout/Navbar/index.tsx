@@ -68,8 +68,8 @@ const Navbar: React.FC = () => {
           </div>
 
           <motion.a
-            href="/cv.pdf"
-            download
+            href={MY_CV}
+            download="Yevhenii_Hordiienko_CV.pdf"
             className="hidden md:flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-400/20 transition-all"
             whileHover={{ scale: 1.05 }}
           >
@@ -114,7 +114,7 @@ const Navbar: React.FC = () => {
                   <a href={MY_LINKEDIN_URL} target="_blank">
                     <FiLinkedin className="text-purple-400 w-6 h-6" />
                   </a>
-                  <a href={MY_CV} download>
+                  <a href={MY_CV} download="Yevhenii_Hordiienko_CV.pdf">
                     <FiFileText className="text-gray-300 w-6 h-6" />
                   </a>
                 </div>
