@@ -20,7 +20,7 @@ export const HeroSection = () => (
         </span>
         <TypeAnimation
           sequence={[
-            "Full-Cycle Web Application Development",
+            "Web Application Development",
             2000,
             "Open Source Contributor",
             2000,
