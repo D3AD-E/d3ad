@@ -1,8 +1,20 @@
 import { motion } from "framer-motion";
-import { FiSend, FiUser, FiMail, FiMessageSquare } from "react-icons/fi";
+import { FiSend, FiMessageSquare } from "react-icons/fi";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-
+import { useState } from "react";
+import { TiThLarge } from "react-icons/ti";
 export const ContactForm = () => {
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    window.location.href = `mailto:evg.gordi@gmail.com?subject=${encodeURIComponent(
+      title
+    )}&body=${encodeURIComponent(message)}`;
+  };
+
   return (
     <section className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -18,23 +30,19 @@ export const ContactForm = () => {
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl opacity-20 group-hover:opacity-30 transition-opacity blur-lg" />
 
-            <form className="relative bg-black/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/20">
+            <form
+              onSubmit={handleSubmit}
+              className="relative bg-black/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/20"
+            >
               <div className="space-y-6">
                 <div>
-                  <label className="flex items-center text-cyan-400 mb-2">
-                    <FiUser className="mr-2" />
-                    Name
-                  </label>
-                  <input className="w-full bg-white/5 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all" />
-                </div>
-
-                <div>
                   <label className="flex items-center text-purple-400 mb-2">
-                    <FiMail className="mr-2" />
-                    Email
+                    <TiThLarge className="mr-2" />
+                    Title
                   </label>
                   <input
-                    type="email"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
                     className="w-full bg-white/5 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-400/50 transition-all"
                   />
                 </div>
@@ -45,6 +53,8 @@ export const ContactForm = () => {
                     Message
                   </label>
                   <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     rows={4}
                     className="w-full bg-white/5 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 transition-all"
                   />
@@ -57,7 +67,7 @@ export const ContactForm = () => {
                   className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-400/20 transition-all"
                 >
                   <FiSend className="w-5 h-5" />
-                  Send Transaction
+                  Send
                 </motion.button>
               </div>
             </form>
