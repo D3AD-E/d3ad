@@ -8,7 +8,7 @@ export const LanguageSection = () => (
     className="py-20"
   >
     <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-      Language Stack
+      Languages I Speak
     </h2>
     <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
       {languages.map((language, index) => (

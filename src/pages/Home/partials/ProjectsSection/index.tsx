@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { projects } from "./ProjectsSection.consts";
+import { FiGithub } from "react-icons/fi";
 
 export const ProjectsSection = () => (
   <section className="py-20">
@@ -22,7 +23,19 @@ export const ProjectsSection = () => (
 
             <div className="relative">
               <h3 className="text-2xl font-bold text-cyan-400 mb-2">
-                {project.title}
+                {project.githubUrl ? (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-purple-400 transition-colors"
+                  >
+                    {project.title}
+                    <FiGithub className="inline-block ml-2 text-lg" />
+                  </a>
+                ) : (
+                  project.title
+                )}
               </h3>
               <p className="text-gray-300 mb-4">{project.description}</p>
 
@@ -34,14 +47,33 @@ export const ProjectsSection = () => (
                 ))}
               </div>
 
-              <ul className="space-y-2">
-                {project.achievements.map((achievement, i) => (
-                  <li key={i} className="flex items-center text-gray-400">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
+              <div className="space-y-4">
+                {project.technologyUsed && (
+                  <div className="mb-4">
+                    <h4 className="text-cyan-400 mb-2">Tech Stack:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologyUsed.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="px-3 py-1 text-sm bg-white/5 rounded-full text-gray-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                <h4 className="text-cyan-400">Key Achievements:</h4>
+                <ul className="space-y-2">
+                  {project.achievements.map((achievement, i) => (
+                    <li key={i} className="flex items-center text-gray-400">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         ))}
