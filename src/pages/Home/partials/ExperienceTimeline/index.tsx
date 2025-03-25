@@ -10,7 +10,7 @@ export const ExperienceTimeline = () => (
       </h2>
 
       <div className="relative">
-        <div className="absolute left-4 md:left-1/2 w-1 h-full bg-gradient-to-b from-cyan-500/30 to-purple-500/30" />
+        <div className="absolute left-1/2 w-1 h-full bg-gradient-to-b from-cyan-500/30 to-purple-500/30" />
 
         {experiences.map((exp, idx) => (
           <motion.div
@@ -28,7 +28,7 @@ export const ExperienceTimeline = () => (
               }`}
             >
               <div
-                className={`absolute top-6 -m-4 p-2 bg-cyan-400 rounded-full ${
+                className={`absolute top-6 -m-4 p-2 bg-cyan-400 rounded-full hidden md:block ${
                   idx % 2 === 0 ? "-right-6" : "-left-6"
                 }`}
               >
