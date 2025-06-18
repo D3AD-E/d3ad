@@ -8,12 +8,6 @@ export const languages: LanguageItem[] = [
     isNative: true,
   },
   {
-    name: "Russian",
-    level: "Native",
-    flag: "🇷🇺",
-    isNative: true,
-  },
-  {
     name: "English",
     level: "C1",
     flag: "🇬🇧",
