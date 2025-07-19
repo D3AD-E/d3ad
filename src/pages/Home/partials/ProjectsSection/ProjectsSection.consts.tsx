@@ -77,12 +77,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/D3AD-E/Solana-sniper-bot",
   },
   {
-    title: "Solana Account Closer",
+    title: "Solana Pumpfun SDK",
     description:
-      "Node.js TypeScript application for closing Solana blockchain accounts",
+      "High-level TypeScript SDK for Pump Fun. Buy, sell and create functions. Jito bundle send options. Added support for new events",
     tech: [<SiSolana />, <SiNodedotjs />, <SiTypescript />],
-    achievements: ["Bulk token account management"],
+    achievements: ["npm package", "TypeScript support"],
     technologyUsed: ["Solana Web3.js"],
-    githubUrl: "https://github.com/D3AD-E/SolanaCleaner",
+    githubUrl: "https://github.com/D3AD-E/pumpdotfun-repumped-sdk",
   },
 ];
