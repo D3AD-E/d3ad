@@ -3,7 +3,6 @@ import {
   SiEthereum,
   SiReact,
   SiAntdesign,
-  SiBlazor,
   SiBootstrap,
   SiCss3,
   SiDocker,
@@ -17,7 +16,7 @@ import {
   SiTypescript,
   SiSolana,
 } from "react-icons/si";
-import { FaMicrosoft, FaAws, FaCode } from "react-icons/fa";
+import { FaMicrosoft, FaAws, FaCode, FaNodeJs } from "react-icons/fa";
 import { GrReactjs } from "react-icons/gr";
 import { SkillCategoryType, Skill, SkillCategory } from "./SkillSection.types";
 import { GiMeshNetwork } from "react-icons/gi";
@@ -61,7 +60,7 @@ export const skills: Skill[] = [
     name: "React Native",
     category: SkillCategoryType.Framework,
   },
-  { icon: <SiBlazor />, name: "Blazor", category: SkillCategoryType.Framework },
+  { icon: <FaNodeJs />, name: "NodeJS", category: SkillCategoryType.Framework },
   {
     icon: <SiNextdotjs />,
     name: "Next.js",
