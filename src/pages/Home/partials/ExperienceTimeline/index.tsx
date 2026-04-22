@@ -19,7 +19,7 @@ export const ExperienceTimeline = () => (
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className={`relative mb-12 ${
-              idx % 2 === 0 ? "md:pr-8 md:text-right" : "md:pl-8"
+              idx % 2 === 0 ? "md:pr-8" : "md:pl-8"
             } md:w-1/2 ${idx % 2 === 0 ? "md:mr-auto" : "md:ml-auto"}`}
           >
             <div
