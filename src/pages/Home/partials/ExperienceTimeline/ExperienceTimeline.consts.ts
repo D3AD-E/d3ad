@@ -2,8 +2,21 @@ import { Experience } from "./ExperienceTimeline.types";
 
 export const experiences: Experience[] = [
   {
-    date: "2024 - Present",
-    period: "DEC 2024 - PRESENT",
+    date: "2025 - Present",
+    period: "OCT 2025 - PRESENT",
+    position: "Software Developer",
+    company: "Trust Wallet",
+    location: "Remote",
+    highlights: [
+      "Built a tweet token scanner on the TW extension that replaces tokens in tweets, simplifying trading for users — delivered from scratch in under a week",
+      "Developed Tronify integration on the extension, driving revenue and reducing transaction costs for users",
+      "Enhanced the mobile app with perps and offramp features",
+      "Mentored colleagues across the team",
+    ],
+  },
+  {
+    date: "2024 - 2025",
+    period: "DEC 2024 - OCT 2025",
     position: "Senior Software Developer",
     company: "Freeport Metrics",
     location: "Warsaw, Poland",
